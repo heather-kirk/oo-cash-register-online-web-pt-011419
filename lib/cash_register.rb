@@ -13,6 +13,7 @@ class CashRegister
   @items << title
   end 
 end 
+
   def apply_discount
     if discount != 0
       self.total = (total * ((100.0 - discount) / 100 ))
@@ -22,8 +23,7 @@ end
     end
   end 
   
- 
-
-   def void_last_transaction
+ def void_last_transaction
+   - @total 
    end 
 end 
