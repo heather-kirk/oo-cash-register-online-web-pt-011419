@@ -12,10 +12,13 @@ class CashRegister
   end 
   
   def apply_discount
-    if discount != 0 
-    else 
+    if discount != 0
+      self.total = (total * ((100 - discount) / 100))
+      "After the discount, the total comes to $#{self.total}."
+    else
       "There is no discount to apply."
-  end 
+    end
+
   
   def items
    
